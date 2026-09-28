@@ -1,0 +1,9 @@
+Qui va copiato X-Launcher.exe (dalla tua installazione winPenPack), rinominato in X-Submarine.exe.
+
+Non e' incluso in questo pacchetto: e' un binario di winPenPack, non generato da questo progetto.
+
+Al termine, in questa cartella devono restare solo:
+  X-Submarine.exe   (copia di X-Launcher.exe rinominata)
+  X-Submarine.ini   (gia' presente)
+
+Cancella questo file una volta copiato X-Submarine.exe.
