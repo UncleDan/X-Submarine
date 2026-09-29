@@ -1,1 +1,23 @@
+# Pacchetti di distribuzione generati (Crea-Release.cmd)
+releases/
+
+# Binari compilati (X-Submarine.exe e qualsiasi altro .exe generato)
+*.exe
+
+# Temporanei di compilazione AutoIt/Aut2Exe/SciTE
+*.obj
+*.tmp
+*.bak
+*.log
+au3check.txt
+~*.tmp
+
+# Staging temporaneo usato da Crea-Release.cmd
+/releases/_staging/
+
+# File di sistema Windows
+Thumbs.db
+desktop.ini
+
+# Claude files
 Submarine-winPenPack_v*.zip
