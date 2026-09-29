@@ -76,7 +76,7 @@ set "AUT2EXE="
 for %%P in (
     "%ProgramFiles(x86)%\AutoIt3\Aut2Exe\Aut2exe.exe"
     "%ProgramFiles%\AutoIt3\Aut2Exe\Aut2exe.exe"
-    "C:\X-Software\A\winPenPack\Bin\autoit-v3\install\Aut2Exe"
+    "C:\X-Software\A\winPenPack\Bin\autoit-v3\install\Aut2Exe\Aut2exe.exe"
 ) do (
     if "%AUT2EXE%"=="" if exist %%P set "AUT2EXE=%%~P"
 )
