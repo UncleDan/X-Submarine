@@ -1,0 +1,17 @@
+---------------------------------------------------------------------
+winPenPack Project § X-Software collection
+Copyright © 2005-2026 Danilo Leggieri and winPenPack Development Team
+---------------------------------------------------------------------
+
+http://www.winpenpack.com
+winpenpack@gmail.com
+winPenPack License Agreement:
+http://www.winpenpack.com/main/page.php?5
+
+=====================================================================
+X-Submarine [rev 1.0b9]
+Original software Author: SinaXhpm
+Original software Home: https://github.com/SinaXhpm/Submarine
+Original software license: vedi repository GitHub (non verificata)
+X-Software (portable) released on: 29/09/2026
+=====================================================================

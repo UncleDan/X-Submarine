@@ -1,5 +1,5 @@
 ;   winPenPack X-Submarine Launcher
-;   by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0 - 2026-09-27 16:09:04
+;   by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
 ;   Basato sulla struttura sorgente di X-Firefox 1.5.4 rev.8 (winPenPack)
 
 #Region
@@ -19,13 +19,13 @@
 
 ;** Target program Resource info
 #AutoIt3Wrapper_Res_Field=ProductName|winPenPack X-Submarine
-#AutoIt3Wrapper_Res_Field=ProductVersion|Ini Rev 1
+#AutoIt3Wrapper_Res_Field=ProductVersion|1.0b9
 #AutoIt3Wrapper_Res_Field=OriginalFilename|X-Submarine.exe
 #AutoIt3Wrapper_Res_Field=InternalName|X-Submarine
 #AutoIt3Wrapper_Res_Description=winPenPack X-Submarine Launcher
 #AutoIt3Wrapper_Res_Field=CompanyName|www.winpenpack.com
 #AutoIt3Wrapper_Res_Field=Authors|Daniele Lolli (UncleDan)
-#AutoIt3Wrapper_Res_Fileversion=1.0.0.0
+#AutoIt3Wrapper_Res_Fileversion=1.0.0.9
 #AutoIt3Wrapper_Res_Comment=X-Launcher allows you to change at will the options for initiating programs undertaken in order to make them portable.
 #AutoIt3Wrapper_Res_LegalCopyright=GNU General Public License
 #AutoIt3Wrapper_Res_Field=LegalTrademarks|winPenPack

@@ -1,12 +1,12 @@
 @echo off
-:: Crea-Release.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0 - 2026-09-29 08:32:19
+:: Crea-Release.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
 setlocal enabledelayedexpansion
 title Creazione release X-Submarine
 
 set "ROOT=%~dp0.."
 for %%I in ("%ROOT%") do set "ROOT=%%~fI"
 
-set "SRC_DIR=%ROOT%\_launcher-source\X-Submarine"
+set "SRC_DIR=%ROOT%\X-Submarine"
 set "EXE_FILE=%SRC_DIR%\X-Submarine.exe"
 set "INI_FILE=%SRC_DIR%\x-launcher.ini"
 set "RELEASES_DIR=%ROOT%\releases"
@@ -45,18 +45,15 @@ if not exist "%INI_FILE%" (
 :: -------------------------------------------------------------
 echo [2/5] Calcolo versione e timestamp...
 
-set "SOFT_VERSION="
-for /f "tokens=2 delims==" %%V in ('findstr /b /i "Soft.Version=" "%INI_FILE%"') do set "SOFT_VERSION=%%V"
-if "%SOFT_VERSION%"=="" set "SOFT_VERSION=dev"
-
-set "INI_REV="
-for /f "tokens=2 delims==" %%R in ('findstr /b /i "Ini Revision=" "%INI_FILE%"') do set "INI_REV=%%R"
-if "%INI_REV%"=="" set "INI_REV=0"
+:: Versione del pacchetto = campo "Ini Revision" dell'ini (es. 1.0b9)
+set "PKG_VERSION="
+for /f "tokens=2 delims==" %%R in ('findstr /b /i "Ini Revision=" "%INI_FILE%"') do set "PKG_VERSION=%%R"
+if "%PKG_VERSION%"=="" set "PKG_VERSION=dev"
 
 :: Timestamp in ora locale ^(assunta = fuso Roma sulla macchina di build^) via PowerShell, formato affidabile indipendente dal locale
 for /f "delims=" %%T in ('powershell -NoProfile -Command "Get-Date -Format \"yyyyMMdd-HHmm\""') do set "TIMESTAMP=%%T"
 
-set "RELEASE_NAME=X-Submarine_%SOFT_VERSION%_win32_rev%INI_REV%_%TIMESTAMP%"
+set "RELEASE_NAME=X-Submarine_%PKG_VERSION%_win32_%TIMESTAMP%"
 set "ZIP_FILE=%RELEASES_DIR%\%RELEASE_NAME%.zip"
 
 echo       Nome release: %RELEASE_NAME%

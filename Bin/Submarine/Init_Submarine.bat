@@ -1,5 +1,5 @@
 @echo off
-:: Init_Submarine.bat by Daniele Lolli (UncleDan) feat. Claude AI - Release 2.0 - 2026-09-27 16:09:04
+:: Init_Submarine.bat by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
 setlocal enabledelayedexpansion
 title Download Submarine Portable
 

@@ -1,13 +1,13 @@
 @echo off
-:: Estrai-Icona.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.1 - 2026-09-29 08:45:00
+:: Estrai-Icona.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
 setlocal enabledelayedexpansion
 
 set "ROOT=%~dp0.."
 for %%I in ("%ROOT%") do set "ROOT=%%~fI"
 
 set "SUBMARINE_EXE=%ROOT%\Bin\Submarine\Submarine.exe"
-set "ICON_OUT=%ROOT%\_launcher-source\X-Submarine\graphics\x-icon.ico"
-set "PLACEHOLDER_MARKER=%ROOT%\_launcher-source\X-Submarine\graphics\.icon-is-placeholder"
+set "ICON_OUT=%ROOT%\X-Submarine\graphics\x-icon.ico"
+set "PLACEHOLDER_MARKER=%ROOT%\X-Submarine\graphics\.icon-is-placeholder"
 
 :: Il pacchetto include gia' un'icona segnaposto generica (x-icon.ico),
 :: cosi' la compilazione funziona anche al primo giro. Questo script la

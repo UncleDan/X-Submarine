@@ -1,5 +1,5 @@
 @echo off
-:: Compila-Launcher.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0 - 2026-09-29 08:32:19
+:: Compila-Launcher.cmd by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
 setlocal enabledelayedexpansion
 title Compilazione X-Submarine
 
@@ -7,8 +7,8 @@ title Compilazione X-Submarine
 set "ROOT=%~dp0.."
 for %%I in ("%ROOT%") do set "ROOT=%%~fI"
 
-set "AU3_SOURCE=%ROOT%\_launcher-source\X-Submarine\X-Submarine.au3"
-set "AU3_OUT=%ROOT%\_launcher-source\X-Submarine\X-Submarine.exe"
+set "AU3_SOURCE=%ROOT%\X-Submarine\X-Submarine.au3"
+set "AU3_OUT=%ROOT%\X-Submarine\X-Submarine.exe"
 
 echo =======================================================
 echo     Compilazione X-Submarine.exe
@@ -67,13 +67,15 @@ if not "%WRAPPER%"=="" (
 :: -------------------------------------------------------------
 echo [ATTENZIONE] AutoIt3Wrapper.exe non trovato, uso Aut2exe.exe come fallback.
 echo              Icona e informazioni di versione potrebbero non essere applicate.
+echo              Uso /nopack per evitare un bug noto di Aut2exe+UPX che
+echo              genera un exe corrotto con errore runtime "Unknown
+echo              function name." — vedi https://autoitscript.com/trac/autoit/ticket/2180
 echo.
 
 set "AUT2EXE="
 for %%P in (
     "%ProgramFiles(x86)%\AutoIt3\Aut2Exe\Aut2exe.exe"
     "%ProgramFiles%\AutoIt3\Aut2Exe\Aut2exe.exe"
-    "C:\X-Software\A\winPenPack\Bin\autoit-v3\install\Aut2Exe\Aut2exe.exe"
 ) do (
     if "%AUT2EXE%"=="" if exist %%P set "AUT2EXE=%%~P"
 )
@@ -94,9 +96,9 @@ if "%AUT2EXE%"=="" (
 )
 
 set "ICON_ARG="
-if exist "%ROOT%\_launcher-source\X-Submarine\graphics\x-icon.ico" set "ICON_ARG=/icon "%ROOT%\_launcher-source\X-Submarine\graphics\x-icon.ico""
+if exist "%ROOT%\X-Submarine\graphics\x-icon.ico" set "ICON_ARG=/icon "%ROOT%\X-Submarine\graphics\x-icon.ico""
 
-"%AUT2EXE%" /in "%AU3_SOURCE%" /out "%AU3_OUT%" %ICON_ARG% /comp 2
+"%AUT2EXE%" /in "%AU3_SOURCE%" /out "%AU3_OUT%" %ICON_ARG% /comp 2 /nopack
 if errorlevel 1 (
     echo [ERRORE] Compilazione fallita.
     pause
