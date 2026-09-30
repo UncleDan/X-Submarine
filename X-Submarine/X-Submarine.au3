@@ -1,6 +1,7 @@
 ;   winPenPack X-Submarine Launcher
-;   by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 13:37:52
-;   Basato sulla struttura sorgente di X-Firefox 1.5.4 rev.8 (winPenPack)
+;   by Daniele Lolli (UncleDan) feat. Claude AI - Release 1.0b9 - 2026-09-29 14:05:00
+;   Basato sul codice sorgente generico di X-Launcher 1.5.4 (winPenPack),
+;   con solo icona e informazioni di risorsa personalizzate per Submarine.
 
 #Region
 
@@ -34,6 +35,8 @@
 
 #EndRegion
 
-;** Include X-Launcher's source code
-#include "..\_x-launcher\x-launcher.au3"
-#include "files\x-install.au3"
+;** Include X-Launcher's source code (tutto nella stessa cartella, layout
+;   flat come nel pacchetto sorgente generico X-Launcher 1.5.4 — nessuna
+;   sottocartella "_x-launcher" separata)
+#include 'x-launcher.au3'
+#include 'files\x-install.au3'

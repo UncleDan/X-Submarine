@@ -42,9 +42,9 @@ echo       Nome file: %SOURCE_NAME%.zip
 echo.
 
 :: -------------------------------------------------------------
-:: [2/4] Prepara lo staging: X-Submarine\, _x-launcher\, Readme\
-:: ^(stessa struttura del pacchetto sorgente ufficiale^), piu' il
-:: nostro README.md del progetto copiato dentro Readme\.
+:: [2/4] Prepara lo staging: X-Submarine\ (motore incluso, layout
+:: flat) e Readme\, piu' il nostro README.md del progetto copiato
+:: dentro Readme\.
 :: -------------------------------------------------------------
 echo [2/4] Preparazione della struttura sorgenti...
 
@@ -52,7 +52,6 @@ if exist "%STAGING_DIR%" rmdir /s /q "%STAGING_DIR%"
 mkdir "%STAGING_DIR%"
 
 xcopy "%ROOT%\X-Submarine" "%STAGING_DIR%\X-Submarine\" /e /i /y > nul
-xcopy "%ROOT%\_x-launcher" "%STAGING_DIR%\_x-launcher\" /e /i /y > nul
 xcopy "%ROOT%\Readme" "%STAGING_DIR%\Readme\" /e /i /y > nul
 
 :: Il nostro README.md di progetto, dentro Readme\, accanto ai
